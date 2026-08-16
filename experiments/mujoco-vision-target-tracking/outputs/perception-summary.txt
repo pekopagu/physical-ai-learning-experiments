@@ -1,0 +1,9 @@
+test_a ground_truth: detected=200/200, mean=0.000000m, median=0.000000m, max=0.000000m, 3cm=200/200, 1cm=200/200
+test_a handcrafted: detected=200/200, mean=0.005543m, median=0.005214m, max=0.012732m, 3cm=200/200, 1cm=192/200
+test_a cnn: detected=200/200, mean=0.042661m, median=0.032270m, max=0.184795m, 3cm=89/200, 1cm=11/200
+test_b ground_truth: detected=200/200, mean=0.000000m, median=0.000000m, max=0.000000m, 3cm=200/200, 1cm=200/200
+test_b handcrafted: detected=181/200, mean=0.163597m, median=0.006489m, max=1.680705m, 3cm=146/200, 1cm=126/200
+test_b cnn: detected=200/200, mean=0.065495m, median=0.041426m, max=0.793639m, 3cm=66/200, 1cm=9/200
+test_c ground_truth: detected=200/200, mean=0.000000m, median=0.000000m, max=0.000000m, 3cm=200/200, 1cm=200/200
+test_c handcrafted: detected=174/200, mean=0.338967m, median=0.010188m, max=1.947432m, 3cm=101/200, 1cm=86/200
+test_c cnn: detected=200/200, mean=0.135054m, median=0.063743m, max=1.030148m, 3cm=52/200, 1cm=5/200

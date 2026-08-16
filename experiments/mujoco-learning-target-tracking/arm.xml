@@ -1,0 +1,31 @@
+<mujoco model="two_link_learning_target_tracking">
+  <option timestep="0.002" gravity="0 0 0"/>
+
+  <visual>
+    <global azimuth="90" elevation="-90" offwidth="1200" offheight="760"/>
+  </visual>
+
+  <worldbody>
+    <light pos="0 0 3"/>
+    <geom name="floor" type="plane" size="2 2 0.1" rgba="0.15 0.15 0.15 1"/>
+    <body name="base" pos="0 0 0.05">
+      <geom type="cylinder" size="0.09 0.05" rgba="0.3 0.3 0.3 1" contype="0" conaffinity="0"/>
+      <body name="link1" pos="0 0 0.05">
+        <joint name="shoulder" type="hinge" axis="0 0 1" range="-180 180" damping="1"/>
+        <geom type="capsule" fromto="0 0 0 0.6 0 0" size="0.045" rgba="0.2 0.5 0.9 1" contype="0" conaffinity="0"/>
+        <body name="link2" pos="0.6 0 0">
+          <joint name="elbow" type="hinge" axis="0 0 1" range="-180 180" damping="1"/>
+          <geom type="capsule" fromto="0 0 0 0.45 0 0" size="0.04" rgba="0.2 0.8 0.5 1" contype="0" conaffinity="0"/>
+          <site name="end_effector" pos="0.45 0 0" size="0.055" rgba="1 0.8 0 1"/>
+        </body>
+      </body>
+    </body>
+    <site name="target" pos="0.65 0.55 0.1" size="0.07" rgba="1 0.1 0.1 0.65"/>
+    <camera name="overview" pos="0.45 0.35 2.4" xyaxes="1 0 0 0 1 0"/>
+  </worldbody>
+
+  <actuator>
+    <position name="shoulder_position" joint="shoulder" kp="80" kv="8" ctrlrange="-3.1416 3.1416"/>
+    <position name="elbow_position" joint="elbow" kp="60" kv="6" ctrlrange="-3.1416 3.1416"/>
+  </actuator>
+</mujoco>

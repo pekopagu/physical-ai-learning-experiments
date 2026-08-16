@@ -1,0 +1,13 @@
+[project]
+name = "mujoco-vision-target-tracking"
+version = "0.1.0"
+description = "CPU-only comparison of handcrafted and learned visual target localization"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "matplotlib>=3.10,<4",
+  "mujoco>=3.3,<4",
+  "numpy>=2,<3",
+  "opencv-python-headless>=4.12,<5",
+  "pillow>=11,<13",
+  "torch>=2.7,<3",
+]

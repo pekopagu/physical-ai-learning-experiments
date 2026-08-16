@@ -1,0 +1,14 @@
+[project]
+name = "mujoco-learning-target-tracking"
+version = "0.1.0"
+description = "CPU-only learning-based control comparison for a MuJoCo two-link arm"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "gymnasium>=1.1,<2",
+  "imageio>=2.37,<3",
+  "imageio-ffmpeg>=0.6,<1",
+  "matplotlib>=3.10,<4",
+  "mujoco>=3.3,<4",
+  "numpy>=2,<3",
+  "stable-baselines3>=2.7,<3",
+]
